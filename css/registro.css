@@ -1,0 +1,41 @@
+form{
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+}
+
+input{
+    display: block;
+    padding: 10px;
+    width: 95%;
+    margin: 30px 0;
+    font-size: 20px;
+}
+.boton{
+    width: 200px;
+    margin: 1px auto;
+    color: white;
+    background: linear-gradient(#2980B9, #1A5276);
+    border: 0;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+.boton:hover{
+    opacity: 1;
+}
+.boton:active{
+     transform: scale(0.98);
+}
+
+#botones{
+    display: flex;
+}
+h2{
+    text-align: center;
+    color: #100A7A;
+    font-family: sans-serif;
+    font-size: 30px;
+}
