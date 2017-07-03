@@ -1,0 +1,17 @@
+.btn{
+	margin: 15px auto 0px auto;
+
+	padding: 6px 3%;
+}
+form{
+	border: 1px solid #3D3D3D;
+	margin-top: 25px;
+	text-align: center;
+	width: 40%;
+}
+.pequenio{
+	font-size: 11px;
+}
+input[type="radio"]{
+	margin-left: 10px;
+}

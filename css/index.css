@@ -1,40 +1,7 @@
-h1{
-	color: #100A7A;
-	text-align: center;
-	font-family: arial;
+.info{
+	margin-top: 50px;
+	margin-bottom: 20px;
 }
-.texto{
-	color: purple;
-	font-family: arial;
-	text-align: center;
-	margin-right: 50px;
-	margin-left: 50px; 
-	font-size: 28px;
-    line-height: 1;
-}
-
-p {
-  animation-duration: 2s;
-  animation-name: slidein;
-  margin: 5px;
-}
-.columnas{
-	display: flex;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-.imagen{
-    padding: 0px;
-    display: block;
-    margin: 30px auto;
+.info-ulti{
+	font-size: 15px;
 }

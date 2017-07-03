@@ -3,25 +3,41 @@
 <head>
 	<title>Registro</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link rel="stylesheet" type="text/css" href="/css/registro.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/mainplus.css">
+    <link rel="stylesheet" type="text/css" href="./css/registro.css">
 </head>
-<body>
-    <header id="main-header">
-		<span id="logo-header">
-			<span class="site-name"><img src="images/logoBlanco.png" width="185" height="60"/> </span>
-		</span>
-	</header>
+<body background="./football.jpg">
+   <header>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="Principal.html" class="logo navbar-brand">Championship Lite</a>
+                </div>
+            </div>
+        </nav>
+    </header>
     <form>
     <h2>Crear Cuenta</h2>
+    <hr class="colorgraph">
         <input type="email" placeholder="&#9993;  Correo" required autofocus>
         <input type="text" placeholder="&#128100;  Usuario" required>
         <input type="password" placeholder="&#128273;  Contrase&ntilde;a" required>
         <input type="password" placeholder="&#128273;  Verificar Contrase&ntilde;a" required>
+        <hr class="colorgraph">
             <div id="botones">
             	<input class="boton" type="submit" value="REGISTRAR">
             	<input class="boton" type="reset" value="LIMPIAR">	
             </div>
     </form>
+    <footer class="container-fluid text-center bg-lightgray">
+        <div class="copyrights" style="margin-top:25px;">
+            <p>Alajuela © 2017, All Rights Reserved
+                <br>
+                <span>Web Design By: Kevin Arias</span></p>
+        </div>
+    </footer>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 </body>
 </html>

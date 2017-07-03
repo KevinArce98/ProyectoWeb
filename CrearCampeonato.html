@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Campeonato</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/mainplus.css">
+	<link rel="stylesheet" href="./css/crear.css">
+</head>
+<body background="football.jpg">
+	<header>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-cl">
+						<span class="sr-only">Desplegar / Ocultar Menu</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="logo navbar-brand">Championship Lite</a>
+				</div>
+				<!-- Inicia Menu -->
+				<div class="collapse navbar-collapse navbar-right" id="navegacion-cl">
+					<ul class="nav navbar-nav">
+						<li><a href="Principal.html">Inicio</a></li>
+						<li><a href="#">Acerca de</a></li>
+						<li><a href="#">Contacto</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container" align="center">
+		<form action="">
+			<h2>Creando Campeonato</h2>
+			<p><strong>Nombre de Campeonato</strong></p>
+			<input type="text" placeholder="">
+			<p><small class="pequenio">El nombre del campeonato debe tener entre 4 y 50 caracteres.</small></p>
+			<p><strong>Modo de Campeonato</strong></p>
+			<input type="radio" name="modo" value="" placeholder="Clasificacion">Clasificacion
+			<input type="radio" name="modo" value="" placeholder="Eliminatoria">Eliminatoria<br><br>
+			<p><strong>N&uacute;mero de equipos</strong></p>
+			<div>
+				<input type="number" name="num_teams" placeholder="Clasificacion">
+				<input type="radio" name="num_teams" value="8">8
+				<input type="radio" name="num_teams" value="16">16
+				<input type="radio" name="num_teams" value="32">32
+				<input type="radio" name="num_teams" value="64">64
+				<input type="radio" name="num_teams" value="128">128
+			</div>
+			<p><small class="pequenio">La distribuci&oacute;n de equipos es autom&aacute;tica.</small></p>
+			<input type="submit" name="" class="btn btn-success" value="Crear">
+			<p><small class="pequenio">Presiona crear para agregar los equipos.</small></p>
+		</form>
+	</div>
+	<script src="./js/jquery.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,40 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Principal</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
-	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Index</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/mainplus.css">
+	<link rel="stylesheet" href="./css/index.css">
 </head>
-</head>
-<body >
-	<header id="main-header">
-		<a id="logo-header" href="Principal.html">
-			<span class="site-name"><img src="images/logoBlanco.png" width="185" height="60"/> </span>
-		</a>
-		<nav>
-			<ul>
-				<li><a href="Login.html">Ingresar</a></li>
-				<li><a href="Registro.html">Registrarse</a></li>
-			</ul>
+<body>
+	<header>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-cl">
+						<span class="sr-only">Desplegar / Ocultar Menu</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="Principal.html" class="logo navbar-brand">Championship Lite</a>
+				</div>
+				<!-- Inicia Menu -->
+				<div class="collapse navbar-collapse navbar-right" id="navegacion-cl">
+					<ul class="nav navbar-nav">
+						<li><a href="Login.html">Ingresar</a></li>
+					<li><a href="Registro.html">Registrarse</a></li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 	</header>
-	<h1>¿Quieres tener organizados tus campeonatos?</h1>
-	<p class="texto"> La mejor aplicación web para crear tus campeonatos de futbol, fácil y sencillo, solo tienes que registrarte y empezar a crear campeonatos.<br>
-		Deseamos ser una aplicación indispensable para todos los futboleros que quieren crear un campeonato, por eso damos de una manera fácil y sencilla esta herramienta para que puedas crear tus campeonatos ya sea con tus amigos jugando al videojuego de futbol, o para un campeonato de tu barrio.<br>
-	</p>
-	<div class="columnas">
-		<p class="texto">
-			Nuestro objetivo es que puedas tener tus campeonatos más ordenados, de una forma más clara de entender y saber dónde está tu equipo en la tabla de posiciones.
-		</p>
-		<p class="texto">
-			Esperamos que nuestra aplicación sea mucha utilidad para todos los futboleros que quieran tener su campeonato en nuestra aplicación.
-            <br/><br/>
-        </p>
-	</div>	
-    <div class="columnas">
-        <img class="imagen" src="/images/29.png" width="150px" height="150px"/>
-        <img class="imagen" src="/images/Balon.png" width="150px" height="150px"/>
-    </div>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	  <ol class="carousel-indicators">
+	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    <li data-target="#myCarousel" data-slide-to="1"></li>
+	    <li data-target="#myCarousel" data-slide-to="2"></li>
+	  </ol>
+	  <div class="carousel-inner">
+	    <div class="item active">
+	      <img src="images/slide2.jpg" alt="Los Angeles">
+	    </div>
+
+	    <div class="item">
+	      <img src="images/slide3.png" alt="Chicago">
+	    </div>
+
+	    <div class="item">
+	      <img src="images/slide1.jpg" alt="New York">
+	    </div>
+	   </div>
+	</div>
+	<div class="container">
+		<div class="row info">
+            <div class="col-sm-4">
+                <img class="img-circle img-responsive img-center" src="./images/moviles.png" alt="">
+                <h2>F&aacute;cil</h2>
+                <p>Una simple aplicaci&oacute;n web, con solo tener un ordenador o m&oacute;vil y tener acceso a internet
+                podra disfrutar de nuestra aplicaci&oacute;n.</p>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-circle img-responsive img-center" src="./images/pasos.png" alt="">
+                <h2>Sencillo</h2>
+                <p>Son muy pocos pasos para poder crear su campeonato en nuestra aplicaci&oacute;n.</p>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-circle img-responsive img-center" src="./images/llaves.png" alt="">
+                <h2>Ordenado</h2>
+                <p>Podr&aacute;s tener ordenado todo tu campeonato desde la lista de clasficaci&oacute;n, partidos y hasta los goleadores del torneo.</p>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col-sm-12">
+        		<p class="text-center info-ulti">
+        			Deseamos ser una aplicación indispensable para todos los futboleros que quieren crear un campeonato, por eso damos de una manera fácil y sencilla esta herramienta para que puedas crear tus campeonatos ya sea con tus amigos jugando a un videojuego de futbol, o para un campeonato de tu barrio.
+					Nuestro objetivo es que puedas tener tus campeonatos más ordenados, de una forma más clara de entender y saber dónde está tu equipo en la tabla de posiciones.
+					Esperamos que nuestra aplicación sea mucha utilidad para todos los futboleros que quieran tener su campeonato en nuestra aplicación.
+
+        		</p>
+        	</div>
+        </div>
+	</div>
+	<footer class="container-fluid text-center bg-lightgray">
+        <div class="copyrights" style="margin-top:25px;">
+            <p>Alajuela © 2017, All Rights Reserved
+                <br>
+                <span>Web Design By: Kevin Arias</span></p><br>
+        </div>
+	</footer>
+	<script src="./js/jquery.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
 </body>
 </html>
