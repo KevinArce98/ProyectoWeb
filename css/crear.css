@@ -1,6 +1,5 @@
-.btn{
+.botones{
 	margin: 15px auto 0px auto;
-
 	padding: 6px 3%;
 }
 form{
@@ -14,4 +13,10 @@ form{
 }
 input[type="radio"]{
 	margin-left: 10px;
+}
+.seleccionar{
+margin-bottom: 15px;
+}
+p{
+	margin-bottom: 0px;
 }
