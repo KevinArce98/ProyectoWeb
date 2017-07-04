@@ -13,63 +13,83 @@
 		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-cl">
-						<span class="sr-only">Desplegar / Ocultar Menu</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a href="#" class="logo navbar-brand">Championship Lite</a>
-				</div>
-				<!-- Inicia Menu -->
-				<div class="collapse navbar-collapse navbar-right" id="navegacion-cl">
-					<ul class="nav navbar-nav">
-						<li><a href="Principal.html">Inicio</a></li>
-						<li><a href="#">Acerca de</a></li>
-						<li><a href="#">Contacto</a></li>
-					</ul>
+					<a href="Principal.html" class="logo navbar-brand">Championship Lite</a>
 				</div>
 			</div>
 		</nav>
 	</header>
 	<div class="container" align="center">
-		<form action="">
-			<h2>Creando Campeonato</h2>
-			<p><strong>Nombre de Campeonato</strong></p>
-			<input type="text" size="50" minlength="4" maxlength="50" required autofocus>
-			<p><small class="pequenio">El nombre del campeonato debe tener entre 4 y 50 caracteres.</small></p><br>
-			<p><strong>Modalidad de campeonato</strong></p>
-			<div>
-				<input type="radio" name="modalidad" value="8">Videojuego
-				<input type="radio" name="modalidad" value="16">Real
-			</div><br>
-			<p><strong>Logo del Campeonato</strong></p>
-			<label class="btn btn-primary seleccionar" for="my-file-selector">
-			    <input id="my-file-selector" type="file" style="display:none" 
-			    onchange="$('#upload-file-info').html(this.files[0].name)">
-			    Seleccionar imagen
-			</label>
-			<span class='label label-info seleccionar' id="upload-file-info"></span>
-			<p><strong>Modo de Campeonato</strong></p>
-			<input type="radio" name="modo" value="" placeholder="Clasificacion" >Clasificacion
-			<input type="radio" name="modo" value="" placeholder="Eliminatoria">Eliminatoria<br><br>
-			<p><strong>N&uacute;mero de equipos</strong></p>
-			<div>
-				<input type="number" name="num_teams" min="1" step="1" placeholder="Clasificacion" tolerant-number>
-				<input type="radio" name="num_teams" value="8">8
-				<input type="radio" name="num_teams" value="16">16
-				<input type="radio" name="num_teams" value="32">32
-				<input type="radio" name="num_teams" value="64">64
-				<input type="radio" name="num_teams" value="128">128
+		<form action="AgregarEquipos.html" class="form-horizontal col-xs-12 col-sm-6">
+			<h2 class="text-primary">Creando Campeonato</h2>
+				<div class="form-group">
+				<p><strong>Nombre de Campeonato</strong></p>
+				<input class="form-control text-center" placeholder="Nombre" type="text" size="50" minlength="4" maxlength="50" required autofocus>
+				<p class="help-block">El nombre del campeonato debe tener entre 4 y 50 caracteres.</p>
 			</div>
-			<p><small class="pequenio">La distribuci&oacute;n de equipos es autom&aacute;tica.</small></p>
+			<div class="form-group">
+				<p><strong>Modalidad de campeonato</strong></p>
+				<div>
+					<input type="radio" name="modalidad" value="8">Videojuego
+					<input type="radio" name="modalidad" value="16">Real
+				</div>
+			</div>
+			<div class="form-group">
+				<p><strong>Logo del Campeonato</strong></p>
+				<label class="btn btn-primary seleccionar" for="my-file-selector">
+				    <input id="my-file-selector" type="file" style="display:none" 
+				    onchange="$('#upload-file-info').html(this.files[0].name)">
+				    Seleccionar imagen
+				</label>
+				<span class='label label-info seleccionar' id="upload-file-info"></span>
+			</div>
+			<div class="form-group">
+				<p><strong>Modo de Campeonato</strong></p>
+				<input type="radio" name="modo" value="" placeholder="Clasificacion" >Clasificacion
+				<input type="radio" name="modo" value="" placeholder="Eliminatoria">Eliminatoria
+			</div>
+			<div class="form-group">
+				<p><strong>N&uacute;mero de equipos</strong></p>
+				<div>
+					<input type="number" name="num_teams" min="1" step="1" class="form-control text-center" placeholder="Clasificacion" tolerant-number><br>
+					<input type="radio" name="num_teams" value="8">8
+					<input type="radio" name="num_teams" value="16">16
+					<input type="radio" name="num_teams" value="32">32
+					<input type="radio" name="num_teams" value="64">64
+					<input type="radio" name="num_teams" value="128">128
+				</div>
+				<p class="help-block">La distribuci&oacute;n de equipos es autom&aacute;tica.</p>
+			</div>
+			<h4 class="text-center text-primary">Configuraci&oacute;n del campeonato</h4>
+			<div class="form-group">
+				<p><strong>Puntos por:</strong></p>
+				<input type="number" name="puntosganar" min="0" step="1" class=" text-center" placeholder="Ganar" tolerant-number>
+				<input type="number" name="puntosempatar" min="0" step="1" class=" text-center" placeholder="Empatar" tolerant-number>
+				<input type="number" name="puntosperder" min="0" step="1" class=" text-center" placeholder="Perder" tolerant-number>
+			</div>
+			<div class="form-group">
+				<p><strong>El campeonato posee tabla de goleadores?</strong></p>
+				<input type="radio" name="tblGoleadores" value="" placeholder="si" >S&iacute;
+				<input type="radio" name="tblGoleadores" value="" placeholder="no">No
+			</div>
+			<div class="form-group">
+				<p><strong>El campeonato posee tabla de Amonestados?</strong></p>
+				<input type="radio" name="tblAmonestados" value="" placeholder="si" >S&iacute;
+				<input type="radio" name="tblAmonestados" value="" placeholder="no">No
+			</div>
 			<div class="botones">
 			<input class="btn btn-success" type="submit" value="Crear">
 			<input class="btn btn-danger" type="reset" value="Limpiar">
 			</div>
-			<p><small class="pequenio">Presiona crear para agregar los equipos.</small></p>
+			<p class="help-block">Presiona crear para agregar los equipos.</p>
 		</form>
 	</div>
+	<footer class="container-fluid text-center bg-lightgray">
+        <div class="copyrights" style="margin-top:25px;">
+            <p>Alajuela © 2017, All Rights Reserved
+                <br>
+                <span>Web Design By: Kevin Arias</span></p>
+        </div>
+    </footer>
 	<script src="./js/jquery.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 </body>

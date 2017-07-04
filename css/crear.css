@@ -4,12 +4,22 @@
 }
 form{
 	border: 1px solid #3D3D3D;
+	border-radius: 15px;
 	margin-top: 25px;
+	margin-bottom: 25px;
 	text-align: center;
-	width: 40%;
+	padding-left: 5%; 
+	padding-right: 5%;
+	
 }
-.pequenio{
-	font-size: 11px;
+
+@media (min-width: 768px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: inherit;
+  }
+
+.help-block{
+	font-size: 12px;
 }
 input[type="radio"]{
 	margin-left: 10px;
@@ -19,4 +29,9 @@ margin-bottom: 15px;
 }
 p{
 	margin-bottom: 0px;
+}
+
+.form-control{
+	display: inline;
+	width: 83%;
 }
