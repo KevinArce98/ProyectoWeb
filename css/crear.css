@@ -10,7 +10,7 @@ form{
 	text-align: center;
 	padding-left: 5%; 
 	padding-right: 5%;
-	
+	background-color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -34,4 +34,12 @@ p{
 .form-control{
 	display: inline;
 	width: 83%;
+}
+h2{
+	font: italic bold 25px Georgia, Serif;
+	text-shadow: -5px -5px 5px #aaa;
+}
+body>div.container{
+	  background: url('cancha.jpg');
+	background-size: 100%;
 }

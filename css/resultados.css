@@ -1,0 +1,28 @@
+h2{
+	font: italic bold 100px Georgia, Serif;
+	text-shadow: -5px -5px 5px #aaa;
+	font-size: 30px;
+}
+.contenedor{
+	margin-bottom: 25px;
+	padding: 15px;
+}
+.ronda{
+	display: flex;
+}
+.vs{
+	text-align: center;
+	margin: 0px;
+}
+.form-group{
+	margin: 15px;
+}
+.espacio{
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+.agregar{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}

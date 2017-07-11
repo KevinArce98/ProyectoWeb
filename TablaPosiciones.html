@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Principal</title>
+	<title>Tabla de posiciones</title>
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/mainplus.css">
-	<link rel="stylesheet" href="./css/principal.css">
+	<link rel="stylesheet" href="./css/mainplus.css">
+	<link rel="stylesheet" href="./css/posiciones.css">
 </head>
-<body background="football.jpg">
+<body>
 	<header>
 		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 			<div class="container">
@@ -43,19 +43,68 @@
 		</nav>
 	</header>
 	<div class="container">
-		<div class="row">
-				<img src="./images/logo.png" width="250px" height="85px" class="pull-right logoimg col-xs-12 col-sm-3 col-md-3">
-				<p class="text-primary tustorneos col-xs-12 col-sm-9 col-md-9">Tus Torneos</p>
+		<div class="row  rowtop">
+			<div class="col-md-12">
+				<form action="" class="form-horizontal">
+					<select class="form-control">
+					  <option value="puntos">Puntos</option>
+					  <option value="partidos">Partidos Jugados</option>
+					  <option value="golesA">Goles a Favor</option>
+					  <option value="alfabeto">Alfabeto</option>
+					</select>
+					<input type="submit" value="Ordenar" class="btn btn-success">
+				</form>
+			</div>
 		</div>
-		
-		<hr>
-		<div class="jumbotron text-center">
-			<h3>No se han encontrado torneos.</h3><br><br>
-			<a class="btn btn-primary btn-lg -wide" href="CrearCampeonato.html">
-			<i class="fa fa-plus-circle"></i>&nbsp;Crear un torneo</a>
+		<div class="row rowbottom">
+			<div class="col-md-12">
+			<h2 class="text-center text-primary">Tabla de Posiciones</h2>
+			<div class="panel panel-default">
+				<div class="panel-body">
+				<div class="table-responsive">
+						<table class="table table-hover text-center">
+							<tr class="active">
+								<th class="text-center">Posici&oacute;n</th>
+								<th class="text-center">Equipo</th>
+								<th class="text-center">Partidos Jugados</th>
+								<th class="text-center">Goles a Favor</th>
+								<th class="text-center">Goles en contra</th>
+								<th class="text-center">Puntos</th>
+							</tr>
+							<tr>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+							</tr>
+							<tr>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+
+							</tr>
+							<tr>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+								<td>Celda 2</td>
+
+							</tr>
+						</table>
+				</div>
+				</div>
+			</div>
+		</div>
 		</div>
 	</div>
-	 <footer class="container-fluid text-center bg-lightgray">
+	<footer class="container-fluid text-center bg-lightgray">
         <div class="copyrights" style="margin-top:25px;">
             <p>Alajuela © 2017, All Rights Reserved
                 <br>

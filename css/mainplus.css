@@ -10,7 +10,6 @@ body{
 	font-size: 30px;
 	opacity: 0.9;
 }
-
 .navbar-inverse .navbar-brand:hover{
 	opacity: 1;
 }
@@ -25,10 +24,13 @@ body{
 .navbar-inverse .navbar-nav>li>a {
     color: #fff;
     opacity: 0.9;
-    font-size: 20px
+    font-size: 15px
 }
 .navbar-inverse .navbar-nav>li>a:hover {
     opacity: 1;
+    background-color: #2768C0;
+    text-decoration: underline;
+    text-decoration-color: #49FF6B;
 }
 .bg-lightgray
 {
@@ -36,4 +38,8 @@ body{
 }
 .copyrights{
 	color: #fff;
+}
+body>div.container{
+  box-shadow: 0px 0px 19px 1px rgba(0,0,0,0.75);
+  background-color: #fff;
 }

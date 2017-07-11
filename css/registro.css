@@ -3,7 +3,7 @@ form{
     margin-top: 0px;
     width: 90%; 
     max-width: 500px;
-    padding: 25px 30px 42px 30px;
+    padding: 25px 30px 40px 30px;
     border-radius: 15px;
 }
 input{
@@ -41,7 +41,8 @@ input{
 h2{
     text-align: center;
     color: #100A7A;
-    font-family: "Times New Roman", Georgia, Serif;
+    font: italic bold 100px Georgia, Serif;
+    text-shadow: -5px -5px 5px #aaa;
     font-size: 30px;
 }
 .colorgraph {

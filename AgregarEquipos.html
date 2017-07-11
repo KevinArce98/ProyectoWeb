@@ -25,8 +25,13 @@
 				<div class="collapse navbar-collapse navbar-right" id="navegacion-cl">
 					<ul class="nav navbar-nav">
 						<li><a href="Principal.html">Inicio</a></li>
-						<li><a href="#">Acerca de</a></li>
-						<li><a href="#">Contacto</a></li>
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Perfil <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Editar</a></li>
+								<li class="divider"></li>
+								<li><a href="index.html">Cerrar Sesi&oacute;n</a></li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -46,7 +51,7 @@
 					   <input class="form-control" placeholder="Equipo" type="text" required="">
 				</div>
 					  <p class="help-block">Nombre del equipo que vas agregar</p>
-				<input class="btn btn-success botones" type="submit" value="Agregar">	
+				<input class="btn btn-info botones" type="submit" value="Agregar">	
 			</form>
 		</div>
 
@@ -60,25 +65,29 @@
 				<div class="table-responsive">
 						<table class="table table-hover text-center">
 							<tr class="active">
-								<th class="text-center"># ID</th>
 								<th class="text-center">EQUIPO</th>
 							</tr>
 							<tr>
-								<td>1</td>
 								<td>Celda 2</td>
 							</tr>
 							<tr>
-								<td>2</td>
 								<td>Celda 2</td>
 							</tr>
 							<tr>
-								<td>3</td>
 								<td>Celda 2</td>
 							</tr>
 						</table>
 				</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<a href="Principal.html"><button type="button" class="btn btn-success">Finalizar</button></a>
+			<button type="button" class="btn btn-warning">Editar</button>
+			<button type="button" class="btn btn-danger">Eliminar</button>
+
 		</div>
 	</div>
 	<hr>

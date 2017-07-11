@@ -1,6 +1,8 @@
 .titulo{
 	text-align: center;
 	margin-top: 50px;
+  font: italic bold 100px Georgia, Serif;
+  text-shadow: -5px -5px 5px #aaa;
 }
 
 hr {
