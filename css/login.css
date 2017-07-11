@@ -1,6 +1,8 @@
 body{
     display: flex;
     min-height: 100vh;
+    background: url('../images/football.jpg');
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 

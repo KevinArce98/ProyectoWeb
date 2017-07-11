@@ -1,5 +1,8 @@
 body{
 	background: #E4E4E4;
+	background: url('../images/football.jpg');
+	background-repeat: repeat-y;
+	background-size: 100%;
 }
 .navbar{
 	margin-bottom: 0px;

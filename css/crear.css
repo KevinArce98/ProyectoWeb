@@ -40,6 +40,6 @@ h2{
 	text-shadow: -5px -5px 5px #aaa;
 }
 body>div.container{
-	  background: url('cancha.jpg');
+	background: url('../images/cancha.jpg');
 	background-size: 100%;
 }
