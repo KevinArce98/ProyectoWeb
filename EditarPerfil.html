@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Editar Perfil</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="icon" href="./images/logo.ico">
+	<link rel="stylesheet" href="./css/mainplus.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-cl">
+						<span class="sr-only">Desplegar / Ocultar Menu</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="Principal.html" class="logo navbar-brand">Championship Lite</a>
+				</div>
+				<!-- Inicia Menu -->
+				<div class="collapse navbar-collapse navbar-right" id="navegacion-cl">
+					<ul class="nav navbar-nav">
+						<li><a href="Principal.html">Inicio</a></li>
+						<li><a href="Calendario.html">Calendario</a></li>
+						<li><a href="TablaPosiciones.html">Tabla Posiciones</a></li>
+						<li><a href="LLaves.html">Llaves</a></li>
+						<li><a href="AgregarResultados.html">Agregar resultados</a></li>
+						<li><a href="TablaGoleadores.html">Tabla goleadores</a></li>
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Perfil <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="EditarPerfil.html">Editar</a></li>
+								<li class="divider"></li>
+								<li><a href="index.html">Cerrar Sesi&oacute;n</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container well">
+		<div class="row">
+				<div class="col-xs-12"><h2>Tu Perfil de Usuario</h2></div>
+			</div>
+		<br/><br/>
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="formGroup">Nombre de Usuario</label>
+				<div class="col-sm-2">
+					<input class="form-control" type="text" id="formGroup" value="KevinArce98" readonly>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="formGroup">Nombre</label>
+				<div class="col-sm-4">
+					 <input class="form-control" type="text" id="formGroup" placeholder="Tu nombre">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="formGroup">Apellidos</label>
+				<div class="col-sm-4">
+					<input class="form-control" type="text" id="formGroup">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="formGroup" id="tel">Teléfono</label>
+				<div class="input-group col-sm-3">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+				<input class="form-control" type="text" id="formGroup">		      
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="formGroup" id="tel">Correo electrónico</label>
+				<div class="input-group col-sm-3">
+					<span class="input-group-addon">@</span>
+					<input class="form-control" type="text" id="formGroup" readonly>
+				 </div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="formGroup">Información biográfica</label>
+				<div class="col-sm-4">
+				 	<textarea class="form-control" rows="4"></textarea>
+				 </div>
+			</div>
+			<br />
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="formGroup"></label>
+				<div class="col-sm-4">
+					<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-floppy-saved"></span> Guardar</button>
+					<button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span> Cancelar</button>
+				</div>
+			</div>
+		</form>	
+	</div>
+	<footer class="container-fluid text-center bg-lightgray">
+        <div class="copyrights" style="margin-top:25px;">
+            <p>Alajuela © 2017, All Rights Reserved
+                <br>
+                <span>Web Design By: Kevin Arias</span></p>
+        </div>
+    </footer>
+	<script src="./jquery.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
