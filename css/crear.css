@@ -20,6 +20,7 @@ form{
 
 .help-block{
 	font-size: 12px;
+	color: #494545;
 }
 input[type="radio"]{
 	margin-left: 10px;

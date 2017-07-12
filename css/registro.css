@@ -45,9 +45,6 @@ input{
 }
 h2{
     text-align: center;
-    color: #100A7A;
-    font: italic bold 100px Georgia, Serif;
-    text-shadow: -5px -5px 5px #aaa;
     font-size: 30px;
 }
 .colorgraph {

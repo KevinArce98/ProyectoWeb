@@ -1,6 +1,4 @@
 h2{
-	font: italic bold 100px Georgia, Serif;
-	text-shadow: -5px -5px 5px #aaa;
 	font-size: 30px;
 }
 .contenedor{
@@ -13,6 +11,7 @@ h2{
 .vs{
 	text-align: center;
 	margin: 0px;
+	color: #FF008A;
 }
 .form-group{
 	margin: 15px;

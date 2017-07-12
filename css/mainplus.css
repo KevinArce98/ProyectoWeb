@@ -45,4 +45,14 @@ body{
 body>div.container{
   box-shadow: 0px 0px 19px 1px rgba(0,0,0,0.75);
   background-color: #fff;
+  background-color: transparent;
+}
+h2, h1{
+	color: #8A00FF;
+	
+	font: italic bold 100px Georgia, Serif;
+	font-size: 45px;
+}
+.help-block{
+	color: #fff;
 }

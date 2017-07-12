@@ -2,11 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Editar Perfil</title>
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="icon" href="./images/logo.ico">
 	<link rel="stylesheet" href="./css/mainplus.css">
+	<link rel="stylesheet" href="./css/perfil.css">
 </head>
 <body>
 	<header>
@@ -42,59 +43,54 @@
 			</div>
 		</nav>
 	</header>
-	<div class="container well">
+	<div class="container" align="center">
 		<div class="row">
 				<div class="col-xs-12"><h2>Tu Perfil de Usuario</h2></div>
 			</div>
 		<br/><br/>
-		<form class="form-horizontal">
-			<div class="form-group">
-				<label class="col-sm-2 control-label" for="formGroup">Nombre de Usuario</label>
-				<div class="col-sm-2">
+		<div class="row col-xs-12 col-sm-6"><br><br><br><br><br>
+			<img src="./images/logo.png" width="350px" height="85px" class="img-responsive">
+		</div>
+		<div class="row col-xs-12 col-sm-6">
+			<form class="form-horizontal ">
+				<div class="form-group">
+					<label class="control-label" for="formGroup">Nombre de Usuario</label>
 					<input class="form-control" type="text" id="formGroup" value="KevinArce98" readonly>
 				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-sm-2 control-label" for="formGroup">Nombre</label>
-				<div class="col-sm-4">
-					 <input class="form-control" type="text" id="formGroup" placeholder="Tu nombre">
+				<div class="form-group">
+					<label class="control-label" for="formGroup">Nombre</label>
+					<input class="form-control" type="text" id="formGroup" placeholder="Tu nombre">
 				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-sm-2 control-label" for="formGroup">Apellidos</label>
-				<div class="col-sm-4">
+				<div class="form-group">
+					<label class="control-label" for="formGroup">Apellidos</label>
 					<input class="form-control" type="text" id="formGroup">
 				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-sm-2 control-label" for="formGroup" id="tel">Teléfono</label>
-				<div class="input-group col-sm-3">
-					<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
-				<input class="form-control" type="text" id="formGroup">		      
+				<div class="form-group">
+					<label class="control-label" for="formGroup" id="tel">Teléfono</label>
+					<div class="input-group">
+						<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+						<input class="form-control" type="text" id="formGroup">		      
+					</div>
 				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-sm-2 control-label" for="formGroup" id="tel">Correo electrónico</label>
-				<div class="input-group col-sm-3">
-					<span class="input-group-addon">@</span>
-					<input class="form-control" type="text" id="formGroup" readonly>
-				 </div>
-			</div>
-			<div class="form-group">
-				<label class="col-sm-2 control-label" for="formGroup">Información biográfica</label>
-				<div class="col-sm-4">
-				 	<textarea class="form-control" rows="4"></textarea>
-				 </div>
-			</div>
-			<br />
-			<div class="form-group">
-				<label class="col-sm-2 control-label" for="formGroup"></label>
-				<div class="col-sm-4">
-					<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-floppy-saved"></span> Guardar</button>
-					<button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span> Cancelar</button>
+				<div class="form-group">
+					<label class="control-label" for="formGroup" id="tel">Correo electrónico</label>
+					<div class="input-group">
+						<span class="input-group-addon">@</span>
+						<input class="form-control" type="text" id="formGroup" readonly>
+					 </div>
 				</div>
-			</div>
-		</form>	
+				<div class="form-group">
+					<label class=" control-label" for="formGroup">Información biográfica</label>
+					 <textarea class="form-control" rows="4"></textarea>
+				</div>
+				<br />
+				<div class="form-group">
+					<label class="control-label" for="formGroup"></label>
+						<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-floppy-saved"></span> Guardar</button>
+						<button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span> Cancelar</button>
+				</div>
+			</form>
+		</div>
 	</div>
 	<footer class="container-fluid text-center bg-lightgray">
         <div class="copyrights" style="margin-top:25px;">

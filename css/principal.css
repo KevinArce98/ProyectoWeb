@@ -1,7 +1,7 @@
 hr {
 	height: 10px;
 	border: 0;
-	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+	box-shadow: 0 10px 10px -10px #fff inset;
 }
 .logoimg{
 	margin-top: 25px;
@@ -9,10 +9,10 @@ hr {
 .tustorneos{
 	width: 65%;
 	font: italic bold 100px Georgia, Serif;
-	text-shadow: -5px -5px 5px #aaa;
 	font-size: 35px;
 	margin-top: 35PX;
 	float: left;
+	color: #8A00FF;
 }
 .jumbotron{
 	padding-bottom: 85px;

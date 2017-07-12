@@ -5,3 +5,10 @@
 .info-ulti{
 	font-size: 15px;
 }
+div.row>div>p{
+	color: #fff;
+	font-size: 18px;
+	background: #49A49D;
+    border-radius: 5px;
+    padding: 5px;
+}
