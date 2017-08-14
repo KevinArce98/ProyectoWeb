@@ -6,9 +6,12 @@
 	font-size: 15px;
 }
 div.row>div>p{
-	color: #fff;
+	color: #5F0EC3;
 	font-size: 18px;
-	background: #49A49D;
+	background: #D4D4D4;
     border-radius: 5px;
     padding: 5px;
+}
+body>div.container{
+	margin-bottom: 95px;
 }

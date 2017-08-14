@@ -1,106 +1,103 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Agregar Equipos</title>
-	<link rel="icon" href="./images/logo.ico">
-	<link rel="stylesheet" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" href="./css/mainplus.css">
-	<link rel="stylesheet" href="./css/agregarequipo.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Agregar Equipos</title>
+    <link rel="icon" href="./images/logo.ico">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/mainplus.css">
+    <link rel="stylesheet" href="./css/agregarequipo.css">
 </head>
+
 <body>
-	<header>
-		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-cl">
-						<span class="sr-only">Desplegar / Ocultar Menu</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a href="Principal.html" class="logo navbar-brand">Championship Lite</a>
+    <header>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <div class="logo navbar-brand">Championship Lite</div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="titulo">
+                <h2>Agregar Equipos</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <h4 class="text-center">Datos del Torneo</h4>
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-2">
+                    <label class="form-control">Nombre:</label>
+                </div>
+                <div class="col-md-3">
+                    <input class="form-control" type="text" name="nameTournament" id="nameTournament" readonly>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-control">Equipos:</label>
+                </div>
+                <div class="col-md-3">
+                    <input class="form-control" type="text" name="numberTeams" id="numberTeams" readonly>
+                </div>
+            </div>
+        </div>
+        <div class="row rowend">
+            <form action="#" class="form-inline center-block" id="frmCreate">
+                <p class="help-block"><strong id="helpText">Nombre del equipo que vas agregar.</strong></p>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span></span>
+                    <input class="form-control" placeholder="Equipo" type="text" id="nameTeam" required ">
 				</div>
-				<!-- Inicia Menu -->
-				<div class="collapse navbar-collapse navbar-right" id="navegacion-cl">
-					<ul class="nav navbar-nav">
-						<li><a href="Principal.html">Inicio</a></li>
-						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Perfil <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="EditarPerfil.html">Editar</a></li>
-								<li class="divider"></li>
-								<li><a href="index.html">Cerrar Sesi&oacute;n</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
-	<div class="container">
-		<div class="row">
-			<div class="titulo">
-				<h2>Agregar Equipos</h2>
-				<hr>
-			</div>
-		</div>
-		<div class="row rowend">
-			<form action="#" class="form-inline center-block">
-			 <p class="help-block">Nombre del equipo que vas agregar</p>
-				<div class="input-group">
-					    <span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span></span>
-					   <input class="form-control" placeholder="Equipo" type="text" required="">
-				</div>
-				<input class="btn btn-info botones" type="submit" value="Agregar">	
+				<input class="btn btn-success botones" type="submit " id="addTeam" value="Agregar">	
 			</form>
 		</div>
 
-	<div class="row">
-		<div class="col-md-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title text-center">Equipos Agreados</h3>
+	<div class="row ">
+		<div class="col-md-12 ">
+			<div class="panel panel-default ">
+				<div class="panel-heading ">
+					<h3 class="panel-title text-center ">Equipos Agreados</h3>
 				</div>
-				<div class="panel-body">
-				<div class="table-responsive">
-						<table class="table table-hover text-center">
-							<tr class="active">
-								<th class="text-center">EQUIPO</th>
-							</tr>
-							<tr>
-								<td>Celda 2</td>
-							</tr>
-							<tr>
-								<td>Celda 2</td>
-							</tr>
-							<tr>
-								<td>Celda 2</td>
-							</tr>
-						</table>
+				<div class="panel-body ">
+				<div class="table-responsive ">
+					<table class="table text-center ">
+                        <thead>
+                             <th class="text-center"># Equipo</th>
+                             <th class="text-center">Nombre Equipo</th>
+                         </thead>
+						<tbody id="teamsAdded">
+
+						</tbody>
+					</table>
 				</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-12 text-center">
-			<a href="Principal.html"><button type="button" class="btn btn-success">Finalizar</button></a>
-			<button type="button" class="btn btn-warning">Editar</button>
-			<button type="button" class="btn btn-danger">Eliminar</button>
-
+	<div class="row ">
+		<div class="col-md-12 text-center ">
+			<button type="button " id="edit" class="btn btn-warning ">Editar</button>
+			<button type="button " id="remove" class="btn btn-danger ">Eliminar</button>
+			<button type="button " id="finished" class="btn btn-primary ">Finalizar</button>
 		</div>
 	</div>
 	<hr>
 	</div>
-	<footer class="container-fluid text-center bg-lightgray">
-        <div class="copyrights" style="margin-top:25px;">
+	<footer class="container-fluid text-center bg-lightgray ">
+        <div class="copyrights " style="margin-top:25px; ">
             <p>Alajuela © 2017, All Rights Reserved
                 <br>
                 <span>Web Design By: Kevin Arias</span></p>
         </div>
     </footer>
-	<script src="./js/jquery.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/jquery.js "></script>
+	<script src="./js/bootstrap.min.js "></script>
+	<script src="./js/agregarEquipo.js "></script>
 </body>
 </html>

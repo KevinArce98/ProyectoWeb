@@ -3,6 +3,7 @@
 <head>
 	<title>Registro</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="icon" href="./images/logo.ico">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/mainplus.css">
@@ -18,16 +19,16 @@
             </div>
         </nav>
     </header>
-    <form>
+    <form name="frmRegistro">
     <h2>Crear Cuenta</h2>
     <hr class="colorgraph">
-        <input type="email" placeholder="&#9993;  Correo" required autofocus>
-        <input type="text" placeholder="&#128100;  Usuario" required>
-        <input type="password" placeholder="&#128273;  Contrase&ntilde;a" required>
-        <input type="password" placeholder="&#128273;  Verificar Contrase&ntilde;a" required>
+        <input type="email" placeholder="&#9993;  Correo" id="email" required autofocus>
+        <input type="text" placeholder="&#128100;  Usuario" id="user" required>
+        <input type="password" placeholder="&#128273;  Contrase&ntilde;a" id="pass" required>
+        <input type="password" placeholder="&#128273;  Verificar Contrase&ntilde;a" id="passOther" required>
         <hr class="colorgraph">
             <div id="botones">
-            	<input class="boton" type="submit" value="REGISTRAR">
+            	<input class="boton" type="submit" value="REGISTRAR" id="sendInfo">
             	<input class="boton" type="reset" value="LIMPIAR">	
             </div>
     </form>
@@ -40,5 +41,6 @@
     </footer>
     <script src="./js/jquery.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/registro.js"></script>
 </body>
 </html>

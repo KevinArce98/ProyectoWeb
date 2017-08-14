@@ -4,7 +4,7 @@
 }
 
 hr {
-   	 height: 30px; 
+  height: 30px; 
   border-style: solid; 
   border-color: #041D46; 
   border-width: 1px 0 0 0; 
@@ -35,7 +35,8 @@ form{
 }
 .help-block{
 	margin-bottom: 0px;
-	font-size: 12px;
+	font-size: 15px;
+  color: #FF0000;
 }
 .botones{
 	margin-left: 7.5px;
@@ -46,5 +47,23 @@ img{
 	margin-top: 25px;
 }
 .rowend{
-	margin-bottom: 53px;
+	margin-bottom: 30px;
+}
+.logo{
+  cursor: default;
+}
+h4{
+  font-size: 25px;
+  color: red;
+}
+#nameTournament, #numberTeams{
+  font-size: 15px;
+  font-family: verdana;
+  color: #320505;
+}
+.trselected{
+   background: gray;
+}
+body > div.container{
+  margin-bottom: 75px;
 }

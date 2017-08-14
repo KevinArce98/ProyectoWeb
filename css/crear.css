@@ -43,4 +43,5 @@ h2{
 body>div.container{
 	background: url('../images/cancha.jpg');
 	background-size: 100%;
+	margin-bottom: 64px;
 }

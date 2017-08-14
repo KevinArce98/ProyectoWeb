@@ -48,11 +48,28 @@ body>div.container{
   background-color: transparent;
 }
 h2, h1{
-	color: #8A00FF;
-	
+	color: #fff;
+	background: #3c0707;
+	border-radius: 15px;
 	font: italic bold 100px Georgia, Serif;
 	font-size: 45px;
+	padding-top: 2px;
+	padding-bottom: 3px;
+}
+h1{
+	text-shadow:  2px 2px #5549AA;
 }
 .help-block{
 	color: #fff;
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+html
+{
+    position: relative; 
+    min-height: 100%;
 }

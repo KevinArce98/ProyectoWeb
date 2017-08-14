@@ -44,28 +44,30 @@
 		</nav>
 	</header>
 	<div class="container">
-		<div class="row  rowtop">
-			<div class="col-md-12">
-				<form action="" class="form-horizontal">
-					<select class="form-control">
-					  <option value="goles">Goles</option>
-					  <option value="equipo">Equipo</option>
-					  <option value="alfabeto">Alfabeto</option>
-					</select>
-					<input type="submit" value="Ordenar" class="btn btn-success">
-					<div class="pull-right">
-						<button type="button" class="btn btn-info">Refrescar</button>
-						<button type="button" class="btn btn-danger">Vaciar tabla</button>
-					</div>
-				</form>
-			</div>
+		<div class="row">
+			<h1 class="text-center">Tabla de Goleadores</h1>
+			<div class="frm">
+				<div class="col-md-6">
+					<form action="" >
+						<select class="form-control">
+						  <option value="goles">Goles</option>
+						  <option value="equipo">Equipo</option>
+						  <option value="alfabeto">Alfabeto</option>
+						</select>
+						<input type="submit" value="Ordenar" class="btn btn-success">
+					</form>
+				</div>
+				<div class="col-md-6 text-right">
+					<button type="button" class="btn btn-info">Refrescar</button>
+					<button type="button" class="btn btn-danger">Vaciar tabla</button>
+				</div>
+			</div>				
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<h2 class="text-center">Tabla de Goleadores</h2>
 				<div class="panel panel-default">
 					<div class="panel-body">
-					<div class="table-responsive">
+						<div class="table-responsive">
 							<table class="table table-hover text-center">
 								<tr class="active">
 									<th class="text-center">Posici&oacute;n</th>
@@ -73,26 +75,11 @@
 									<th class="text-center">Goles</th>
 									<th class="text-center">Equipo</th>
 								</tr>
-								<tr>
-									<td>Celda 2</td>
-									<td>Celda 2</td>
-									<td>Celda 2</td>
-									<td>Celda 2</td>
-								</tr>
-								<tr>
-									<td>Celda 2</td>
-									<td>Celda 2</td>
-									<td>Celda 2</td>
-									<td>Celda 2</td>
-								</tr>
-								<tr>
-									<td>Celda 2</td>
-									<td>Celda 2</td>
-									<td>Celda 2</td>
-									<td>Celda 2</td>
-								</tr>
+								<tbody id="goalScorer">
+
+								</tbody>
 							</table>
-					</div>
+						</div>
 					</div>
 				</div>
 			</div>

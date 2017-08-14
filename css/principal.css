@@ -1,18 +1,14 @@
 hr {
 	height: 10px;
 	border: 0;
-	box-shadow: 0 10px 10px -10px #fff inset;
+	box-shadow: 0 10px 10px -10px #200B32 inset;
 }
-.logoimg{
-	margin-top: 25px;
-}
+
 .tustorneos{
-	width: 65%;
-	font: italic bold 100px Georgia, Serif;
-	font-size: 35px;
-	margin-top: 35PX;
-	float: left;
-	color: #8A00FF;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 65px;
+	text-shadow:  2px 2px #5549AA;
 }
 .jumbotron{
 	padding-bottom: 85px;

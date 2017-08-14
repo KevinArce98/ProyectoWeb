@@ -27,7 +27,7 @@ input{
     margin: 30px 0;
     font-size: 20px;
 }
-input[type="submit"]{
+input[type="button"]{
     width: 100%;
     background: linear-gradient(#152CCF, #0D1C87);
     border: 0;

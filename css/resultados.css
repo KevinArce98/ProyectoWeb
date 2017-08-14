@@ -1,20 +1,25 @@
 h2{
-	font-size: 30px;
+	font: italic bold 30px Georgia, Serif;
+	background-color: #fff;
+	color: #721212;
+	border: 2px solid;
+	border-color: #6E0C0C;
 }
 .contenedor{
-	margin-bottom: 25px;
+	background: #fff;
+	margin-bottom: 85px;
+	color: #fff;
 	padding: 15px;
-}
-.ronda{
-	display: flex;
+	border-radius: 25px;
 }
 .vs{
 	text-align: center;
 	margin: 0px;
-	color: #FF008A;
+	color: #471515;
 }
-.form-group{
-	margin: 15px;
+.form-control[readonly], .form-control{
+	border-color: #06B5E4;
+	border-spacing: 2px;
 }
 .espacio{
 	margin-left: 15px;
@@ -24,4 +29,14 @@ h2{
 .agregar{
     margin-top: 10px;
     margin-bottom: 15px;
+}
+.help-block{
+	color: #000000;
+	background-color: #FFFFFF;
+}
+.hover:hover{
+	border-radius: 10px;
+	padding-right: 8px;
+	padding-left: 8px;
+	background-color: #D5D2D2;
 }

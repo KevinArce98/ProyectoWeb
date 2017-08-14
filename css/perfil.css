@@ -2,12 +2,6 @@ label{
 	color: #FF008A;
 	font-size: 18px;
 }
-
-form
-{
-   cursor:pointer;
-   float: inherit;
-}
-div.container>.row{
-	margin-right: 15px;
+.rowbottom{
+	margin-bottom: 95px;
 }

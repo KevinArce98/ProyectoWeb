@@ -1,24 +1,22 @@
-.rowtop{
-	margin-top: 25px;
-}
 .form-control{
 	display: inline-block;
-	width: 35%;
+	width: 50%;
 }
-form{
+.frm{
 	border: 1px solid #04BF1A;
 	border-radius: 35px;
 	padding: 25px;
+	padding-bottom: 50px;
+	margin-bottom: 15px;
 	box-shadow: inset 0px 0px 54px -10px rgba(0,0,0,0.75);
-}
-
-h3{
-	font: italic bold 29px Georgia, Serif;
-	text-shadow: -5px -5px 5px #aaa;
 }
 .rowbottom{
 	margin-bottom: 28px;
 }
 .botonElimninar{
 	margin: 15px;
+}
+.help-block{
+	color: #000000;
+	background-color: #FFFFFF;
 }

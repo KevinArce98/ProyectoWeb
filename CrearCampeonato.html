@@ -20,24 +20,24 @@
 		</nav>
 	</header>
 	<div class="container" align="center">
-		<form action="AgregarEquipos.html" class="form-horizontal col-xs-12 col-sm-6">
+		<form action="" class="form-horizontal col-xs-12 col-sm-6">
 			<h2 class="text-primary">Creando Campeonato</h2>
 				<div class="form-group">
 				<p><strong>Nombre de Campeonato</strong></p>
-				<input class="form-control text-center" placeholder="Nombre" type="text" size="50" minlength="4" maxlength="50" required autofocus>
+				<input class="form-control text-center" placeholder="Nombre" type="text" size="50" minlength="4" maxlength="50" required autofocus id="name">
 				<p class="help-block">El nombre del campeonato debe tener entre 4 y 50 caracteres.</p>
 			</div>
 			<div class="form-group">
 				<p><strong>Modalidad de campeonato</strong></p>
 				<div>
-					<input type="radio" name="modalidad" value="8">Videojuego
-					<input type="radio" name="modalidad" value="16">Real
+					<input type="radio" name="modalidad" id="videogame" value="MV" required>Videojuego
+					<input type="radio" name="modalidad" id="real" value="MR" required>Real
 				</div>
 			</div>
 			<div class="form-group">
 				<p><strong>Logo del Campeonato</strong></p>
-				<label class="btn btn-primary seleccionar" for="my-file-selector">
-				    <input id="my-file-selector" type="file" style="display:none" 
+				<label class="btn btn-primary seleccionar" for="fileSelector">
+				    <input id="fileSelector" type="file" id="picture" style="display:none" 
 				    onchange="$('#upload-file-info').html(this.files[0].name)">
 				    Seleccionar imagen
 				</label>
@@ -45,40 +45,23 @@
 			</div>
 			<div class="form-group">
 				<p><strong>Modo de Campeonato</strong></p>
-				<input type="radio" name="modo" value="" placeholder="Clasificacion" >Clasificacion
-				<input type="radio" name="modo" value="" placeholder="Eliminatoria">Eliminatoria
+				<input type="radio" name="modo" value="MC" id="clasification" placeholder="Clasificacion" required>Clasificacion
+				<input type="radio" name="modo" value="ME" id="playoffs" placeholder="Eliminatoria" required>Eliminatoria
 			</div>
 			<div class="form-group">
 				<p><strong>N&uacute;mero de equipos</strong></p>
-				<div>
-					<input type="number" name="num_teams" min="1" step="1" class="form-control text-center" placeholder="Clasificacion" tolerant-number><br>
-					<input type="radio" name="num_teams" value="8">8
-					<input type="radio" name="num_teams" value="16">16
-					<input type="radio" name="num_teams" value="32">32
-					<input type="radio" name="num_teams" value="64">64
-					<input type="radio" name="num_teams" value="128">128
-				</div>
+				<input type="number" name="numTeams" min="2" max="56" step="2" class="form-control text-center" id="numTeams" placeholder="Equipos" tolerant-number required=""><br>
 				<p class="help-block">La distribuci&oacute;n de equipos es autom&aacute;tica.</p>
 			</div>
 			<h4 class="text-center text-primary">Configuraci&oacute;n del campeonato</h4>
 			<div class="form-group">
 				<p><strong>Puntos por:</strong></p>
-				<input type="number" name="puntosganar" min="0" step="1" class=" text-center" placeholder="Ganar" tolerant-number>
-				<input type="number" name="puntosempatar" min="0" step="1" class=" text-center" placeholder="Empatar" tolerant-number>
-				<input type="number" name="puntosperder" min="0" step="1" class=" text-center" placeholder="Perder" tolerant-number>
-			</div>
-			<div class="form-group">
-				<p><strong>El campeonato posee tabla de goleadores?</strong></p>
-				<input type="radio" name="tblGoleadores" value="" placeholder="si" >S&iacute;
-				<input type="radio" name="tblGoleadores" value="" placeholder="no">No
-			</div>
-			<div class="form-group">
-				<p><strong>El campeonato posee tabla de Amonestados?</strong></p>
-				<input type="radio" name="tblAmonestados" value="" placeholder="si" >S&iacute;
-				<input type="radio" name="tblAmonestados" value="" placeholder="no">No
+				<input type="number" name="puntosganar" min="0" step="1" class=" text-center" id="win" placeholder="Ganar" tolerant-number required>
+				<input type="number" name="puntosempatar" min="0" step="1" class=" text-center" id="tie" placeholder="Empatar" tolerant-number required>
+				<input type="number" name="puntosperder" min="0" step="1" class=" text-center" id="lose" placeholder="Perder" tolerant-number required>
 			</div>
 			<div class="botones">
-			<input class="btn btn-success" type="submit" value="Crear">
+			<input class="btn btn-success" type="button" id="create" value="Crear">
 			<input class="btn btn-danger" type="reset" value="Limpiar">
 			</div>
 			<p class="help-block">Presiona crear para agregar los equipos.</p>
@@ -93,5 +76,6 @@
     </footer>
 	<script src="./js/jquery.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/crearCampeonato.js"></script>
 </body>
 </html>
