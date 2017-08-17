@@ -5,6 +5,10 @@ function addEvents() {
 	txtTeams.addEventListener("change", function(event) {
 		verificationTeams(event);
 	}, true);
+	var btnCancel = document.getElementById("cancel");
+	btnCancel.addEventListener("click", function(){
+		location.href = "Principal.html";
+	}, true);
 }
 addEvents();
 

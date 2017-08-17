@@ -26,11 +26,11 @@
 				<div class="collapse navbar-collapse navbar-right" id="navegacion-cl">
 					<ul class="nav navbar-nav">
 						<li><a href="Principal.html">Inicio</a></li>
-						<li><a href="Calendario.html">Calendario</a></li>
-						<li><a href="TablaPosiciones.html">Tabla Posiciones</a></li>
-						<li><a href="LLaves.html">Llaves</a></li>
-						<li><a href="AgregarResultados.html">Agregar resultados</a></li>
-						<li><a href="TablaGoleadores.html">Tabla goleadores</a></li>
+						<li class="available" ><a  href="Calendario.html">Calendario</a></li>
+						<li class="available"><a href="TablaPosiciones.html">Tabla Posiciones</a></li>
+						<li class="available"><a href="LLaves.html">Llaves</a></li>
+						<li class="available"><a href="AgregarResultados.html">Agregar resultados</a></li>
+						<li class="available"><a href="TablaGoleadores.html">Tabla goleadores</a></li>
 						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Perfil <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="EditarPerfil.html">Editar</a></li>
@@ -47,15 +47,15 @@
 		<div class="row">
 			<h1 class="text-center">Tabla de Posiciones</h1>
 			<div class="col-xs- 12 col-sm-12 col-md-12">
-				<form action="" class="form-horizontal text-center">
-					<select class="form-control">
-					  <option value="puntos">Puntos</option>
-					  <option value="partidos">Partidos Jugados</option>
-					  <option value="golesA">Goles a Favor</option>
-					  <option value="alfabeto">Alfabeto</option>
+				<div class="text-center frm">
+					<select class="form-control" id="select">
+					  <option value="pu">Puntos</option>
+					  <option value="pa">Partidos Jugados</option>
+					  <option value="gol">Goles a Favor</option>
+					  <option value="al">Alfabeto</option>
 					</select>
-					<input type="submit" value="Ordenar" class="btn btn-success">
-				</form>
+					<button type="submit" value="Ordenar" class="btn btn-success" id="order">Ordenar</button>
+				</div>
 			</div>
 		</div>
 		<div class="row rowbottom">
@@ -72,7 +72,7 @@
 							<th class="text-center">Goles en contra</th>
 							<th class="text-center">Puntos</th>
 						</tr>
-						<tbody id="goalScorer">
+						<tbody id="positionsTeams">
 
 						</tbody>
 					</table>
@@ -91,6 +91,7 @@
     </footer>
 	<script src="./js/jquery.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/mainplus.js"></script>
 	<script src="./js/posiciones.js"></script>
 </body>
 </html>

@@ -39,6 +39,8 @@ function addEvents() {
 
 	var btnRemove = document.getElementById("remove");
 	btnRemove.addEventListener("click", removeTeam);
+
+	document.getElementById("nameTeam").focus();
 }
 addEvents();
 
@@ -85,7 +87,7 @@ function addTeams() {
 			addEvents();
 		} else {
 			alert("El numero de equipos excede los solicitados en el torneo, favor el eliminar uno antes de ingresar otro!");
-
+			document.getElementById("nameTeam").focus();
 		}
 		document.getElementById("nameTeam").value = "";
 	}
@@ -102,6 +104,7 @@ function createTeam(Id) {
 		return team;
 	} else {
 		alert("Ingrese el nombre del equipo");
+		document.getElementById("nameTeam").focus();
 		return 0;
 	}
 }
@@ -158,12 +161,9 @@ function saveTeam() {
 		}
 		localStorage.setItem('teams', JSON.stringify(teams));
 		localStorage.setItem('positions', JSON.stringify(positions));
-		document.getElementById("nameTeam").value = "";
-		document.getElementById("addTeam").value = "Agregar";
-		loadTeams();
-		document.getElementById("helpText").innerText = "Nombre del equipo que vas agregar";
-		addEvents();
+		cancelEditing();
 		alert("Equipo editado");
+		document.getElementById("nameTeam").focus();
 	} else {
 		alert("Ingrese el nuevo nombre");
 	}
@@ -173,18 +173,25 @@ function removeTeam() {
 	if (document.getElementsByClassName("trselected").length != 0) {
 		var message = confirm("¿Estás Seguro?");
 		if (message) {
-			var rowSelected = document.getElementsByClassName("trselected")[0].innerText;
+			var rowSelected = document.querySelectorAll("tr.trselected > td.name")[0].innerText;
 			var teams = JSON.parse(localStorage.getItem('teams'));
 			var positions = JSON.parse(localStorage.getItem('positions'));
 			for (var i = 0; i < teams.length; i++) {
 				if (teams[i].name == rowSelected) {
-					teams.splice(i, 1);
-					positions.splice(i, 1);
-					break;
+					if (teams.length != 1) {
+						teams.splice(i, 1);
+						positions.splice(i, 1);
+						localStorage.setItem('teams', JSON.stringify(teams));
+						localStorage.setItem('positions', JSON.stringify(positions));
+						break;
+					} else {
+						localStorage.removeItem("teams");
+						localStorage.removeItem("positions");
+						break;
+					}
 				}
 			}
-			localStorage.setItem('teams', JSON.stringify(teams));
-			localStorage.setItem('positions', JSON.stringify(positions));
+
 			alert("Equipo eliminado");
 			loadTeams();
 			addEvents();
@@ -312,7 +319,7 @@ function finished() {
 		teams = JSON.parse(localStorage.getItem('teams')).length;
 		if (tournamentNumberTeams == teams) {
 			location.href = "Principal.html";
-			if (tournament.mode == "ME") {
+			if (tournament.mode == "MC") {
 				createCalendarClasification();
 			} else {
 

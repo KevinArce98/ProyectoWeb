@@ -33,8 +33,9 @@ function signup(User) {
 					break;
 				} else {
 					saveUser(User);
-					clearFileds();
 					alert("Registrado");
+					clearFileds();
+					location.href = "Login.html";
 					break;
 				}
 			}

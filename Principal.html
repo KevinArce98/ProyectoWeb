@@ -26,11 +26,11 @@
 				<div class="collapse navbar-collapse navbar-right" id="navegacion-cl">
 					<ul class="nav navbar-nav">
 						<li><a href="Principal.html">Inicio</a></li>
-						<li><a href="Calendario.html">Calendario</a></li>
-						<li><a href="TablaPosiciones.html">Tabla Posiciones</a></li>
-						<li><a href="LLaves.html">Llaves</a></li>
-						<li><a href="AgregarResultados.html">Agregar resultados</a></li>
-						<li><a href="TablaGoleadores.html">Tabla goleadores</a></li>
+						<li class="available" ><a  href="Calendario.html">Calendario</a></li>
+						<li class="available"><a href="TablaPosiciones.html">Tabla Posiciones</a></li>
+						<li class="available"><a href="LLaves.html">Llaves</a></li>
+						<li class="available"><a href="AgregarResultados.html">Agregar resultados</a></li>
+						<li class="available"><a href="TablaGoleadores.html">Tabla goleadores</a></li>
 						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Perfil <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="EditarPerfil.html">Editar</a></li>
@@ -49,10 +49,14 @@
 		</div>
 		
 		<hr>
-		<div class="jumbotron text-center">
-			<h3>No se han encontrado torneos.</h3><br><br>
-			<a class="btn btn-primary btn-lg -wide" href="CrearCampeonato.html">
-			<i class="fa fa-plus-circle"></i>&nbsp;Crear un torneo</a>
+		<p class="text-center" id="text">Seleccione el torneo para ver los detalles</p>
+		<div class="jumbotron text-center" id="jumbotron">
+			<div id="notFind">
+				<h3>No se han encontrado torneos.</h3><br><br>
+				<a class="btn btn-primary btn-lg -wide" href="CrearCampeonato.html">
+				<i class="fa fa-plus-circle"></i>&nbsp;Crear un torneo</a>
+			</div>
+			
 		</div>
 	</div>
 	 <footer class="container-fluid text-center bg-lightgray">
@@ -64,5 +68,6 @@
     </footer>
 	<script src="./js/jquery.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/principal.js"></script>
 </body>
 </html>

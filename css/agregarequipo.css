@@ -54,16 +54,23 @@ img{
 }
 h4{
   font-size: 25px;
-  color: red;
+  color: #f0ad4e;
 }
 #nameTournament, #numberTeams{
   font-size: 15px;
   font-family: verdana;
-  color: #320505;
+  color: #03C38F;
+  border-color: #00D55A;
 }
 .trselected{
    background: gray;
 }
 body > div.container{
   margin-bottom: 75px;
+}
+#helpText{
+  color: #f0ad4e;
+}
+.infoTorneo{
+  color: #f0ad4e;
 }

@@ -21,7 +21,7 @@
 	</header>
 	<div class="container" align="center">
 		<form action="" class="form-horizontal col-xs-12 col-sm-6">
-			<h2 class="text-primary">Creando Campeonato</h2>
+			<h1>Creando Campeonato</h1>
 				<div class="form-group">
 				<p><strong>Nombre de Campeonato</strong></p>
 				<input class="form-control text-center" placeholder="Nombre" type="text" size="50" minlength="4" maxlength="50" required autofocus id="name">
@@ -61,10 +61,11 @@
 				<input type="number" name="puntosperder" min="0" step="1" class=" text-center" id="lose" placeholder="Perder" tolerant-number required>
 			</div>
 			<div class="botones">
-			<input class="btn btn-success" type="button" id="create" value="Crear">
-			<input class="btn btn-danger" type="reset" value="Limpiar">
+				<input class="btn btn-success" type="button" id="create" value="Guardar">
+				<input class="btn btn-danger" type="reset" value="Limpiar">
+				<input class="btn btn-warning" type="button" value="Cancelar" id="cancel">
 			</div>
-			<p class="help-block">Presiona crear para agregar los equipos.</p>
+			<p class="help-block">Presiona guardar, para crear el campeonato e ir agregar los equipos.</p>
 		</form>
 	</div>
 	<footer class="container-fluid text-center bg-lightgray">

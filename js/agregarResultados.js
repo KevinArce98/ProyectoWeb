@@ -46,6 +46,12 @@ function addEvents(){
 
 	var btnSaveResult = document.getElementById("saveResult");
 	btnSaveResult.addEventListener("click", finished);
+
+	var btnCancel = document.getElementById("cancel");
+	btnCancel.addEventListener("click", cancel);
+
+	var btnClose = document.getElementsByClassName("close")[0];
+		btnClose.addEventListener("click", cancel)
 }
 addEvents();
 function setScore(a){
@@ -82,5 +88,22 @@ function addGoalVisit(){
 }
 
 function finished(){
+	var goalLocal = document.getElementById("goalLocal").value;
+	var goalVisit = document.getElementById("goalVisit").value;
+	var goalScorerLocal = document.getElementById("scoresLocal").value;
+	var goalScorerVisit = document.getElementById("scoresVisit").value;
 	
+	console.log(goalScorerLocal);
 }
+
+function cancel(){
+	document.getElementById("nameScorer2").value = "";
+	document.getElementById("scoresVisit").value = "";
+	document.getElementById("goalVisit").value = "0";
+
+	document.getElementById("nameScorer1").value = "";
+	document.getElementById("scoresLocal").value = "";
+	document.getElementById("goalLocal").value = "0";
+
+}
+
