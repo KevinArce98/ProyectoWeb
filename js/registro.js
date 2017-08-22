@@ -14,6 +14,7 @@ function signup(User) {
 				saveUser(User);
 				clearFileds();
 				alert("Registrado");
+				location.href = "Login.html";
 			}
 		} else {
 			var element;
@@ -60,6 +61,10 @@ function createUser() {
 		userName: document.getElementById("user").value,
 		pass: document.getElementById("pass").value,
 		passOther: document.getElementById("passOther").value,
+		name: "",
+		lastname: "",
+		phone: "",
+		info: "",
 	};
 	signup(User);
 }

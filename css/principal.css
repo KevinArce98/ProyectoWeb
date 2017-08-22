@@ -2,6 +2,7 @@ hr {
 	height: 10px;
 	border: 0;
 	box-shadow: 0 10px 10px -10px #200B32 inset;
+	margin-bottom: 10px;
 }
 
 .tustorneos{
@@ -19,4 +20,17 @@ hr {
 	color: #f0ad4e;
 	background-color: #FFF;
 	border-radius: 15px;
+}
+
+.btnSelected{
+	background-color: #A47025;
+	cursor: default;
+}
+
+button[name]{
+	margin-bottom: 15px;
+}
+#otro{
+	margin-bottom: 10px;
+
 }

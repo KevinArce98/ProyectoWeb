@@ -8,11 +8,6 @@ form{
     border-radius: 15px;
     background: #D4D4D4;
 }
-body{
-     background: url('../images/football.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
 input{
     display: block;
     padding: 10px;

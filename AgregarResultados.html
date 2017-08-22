@@ -35,7 +35,7 @@
 							<ul class="dropdown-menu">
 								<li><a href="EditarPerfil.html">Editar</a></li>
 								<li class="divider"></li>
-								<li><a href="index.html">Cerrar Sesi&oacute;n</a></li>
+								<li><a id="closeSession">Cerrar Sesi&oacute;n</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -67,25 +67,28 @@
 				</div>
 				<div class="modal-body">
 					<form action="">
-					<div class="form-group">
-						<div class="col-xs-2 col-sm-1 col-md-1">
-							<label><input type="text" value="0" readonly class="form-control text-center" id="goalLocal"></label>
+						<div class="row">
+							<div class="form-group">
+								<div class="col-xs-12 col-sm-2 col-md-2">
+									<label><input type="text" value="0" readonly class="form-control text-center" id="goalLocal"></label>
+								</div>
+								<div class="col-xs-12 col-sm-3 col-md-3">
+									<input type="text" class="form-control text-center" value="" readonly id="teamLocal">
+								</div>
+								<div class="col-xs-12 col-sm-2 col-md-2">
+									<label><input type="text" value="VS" readonly class="form-control text-center"></label>
+								</div>
+								<div class="col-xs-12 col-sm-3 col-md-3">
+									<input type="text" class="form-control col-md-5 text-center" value="" readonly id="teamVisit">
+								</div>
+								<div class="col-xs-12 col-sm-2 col-md-2">
+									<label><input type="text" value="0" readonly class="form-control text-center" id="goalVisit"></label>
+								</div>
+							</div>
 						</div>
-						<div class="col-xs-10 col-sm-4 col-md-4">
-							<input type="text" class="form-control text-center" value="" readonly id="teamLocal">
-						</div>
-						<div class="col-xs-12 col-sm-2 col-md-2">
-							<label><input type="text" value="VS" readonly class="form-control text-center"></label>
-						</div>
-						<div class="col-xs-10 col-sm-4 col-md-4">
-							<input type="text" class="form-control col-md-5 text-center" value="" readonly id="teamVisit">
-						</div>
-						<div class="col-xs-2 col-sm-1 col-md-1">
-							<label><input type="text" value="0" readonly class="form-control text-center" id="goalVisit"></label>
-						</div>
-					</div>
 					</form><br><br><br>
-					<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-6">
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="Nombre anotador" id="nameScorer1">
 								<button type="button" class="btn btn-success agregar" id="addLocal">Agregar</button>
@@ -99,6 +102,7 @@
 								<textarea class="form-control text-right" rows="5" placeholder="Anotadores" readonly id="scoresVisit"></textarea>
 							</div>
 						</div>
+					</div>
 				</div>
 				<div class="modal-footer">
 				<button type="button" class="btn btn-primary" id="saveResult">Guardar Resultado</button>

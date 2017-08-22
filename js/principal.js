@@ -1,58 +1,77 @@
-function disabledLi() {
-	var li = document.getElementsByClassName("available");
-	for (var i = 0; i < li.length; i++) {
-		li[i].style.display = "none";
-	}
-}
-
 function changeJumbotron() {
 	var tournaments = JSON.parse(localStorage.getItem('tournaments'));
+	var count = 0;
+	var parent;
+	var child;
+	var thereWas = false;
 	if (tournaments != null) {
-		var parent = document.getElementById("jumbotron");
-		var child = document.getElementById("notFind");
-		parent.removeChild(child);
-
-		createElements();
-		var tournament = document.getElementById("torneo");
-		tournament.textContent = tournaments[0].name;
-		parent.className = "jumbotron";
-		var tournamentName = localStorage.getItem("active");
-		document.getElementById("text").style.display = 'block';
-		if (tournamentName != null) {
-			setActive();
-		}else {
-			disabledLi();	
+		for (var i = 0; i < tournaments.length; i++) {
+			if (tournaments[i].userName == localStorage.getItem("userActive")) {
+				if (count == 0) {
+					parent = document.getElementById("jumbotron");
+					child = document.getElementById("notFind");
+					parent.removeChild(child);
+					count++;
+				}
+				createElements(tournaments[i].name);
+				var tournament = document.getElementById(tournaments[i].name);
+				tournament.textContent = tournaments[i].name;
+				parent.className = "jumbotron";
+				thereWas = true;
+			}
 		}
+	}
+	if (thereWas == true) {
+		document.getElementById("otro").style.display = 'block';
+		document.getElementById("text").style.display = 'block';
 	}else {
+		document.getElementById("otro").style.display = 'none';
 		document.getElementById("text").style.display = 'none';
-		disabledLi();
 	}
 }
 changeJumbotron();
 
 function addEvents(){
 	if (document.getElementById("notFind") == undefined) {
-		var btnTournament = document.getElementById("torneo");
-		btnTournament.addEventListener("click", setActive);
+		var btnsTournament = document.getElementsByName("torneo");
+		for (var i = 0; i < btnsTournament.length; i++) {
+			btnsTournament[i].addEventListener("click", function click (event) {
+				setActive(this);
+			}, true);
+		}
+		var btnOther = document.getElementById("otro");
+		btnOther.addEventListener("click", function () {
+			location.href = "CrearCampeonato.html";
+		});
 	}
+	if (localStorage.getItem("active")) {
+		var btn = document.getElementById(localStorage.getItem("active"));
+		btn.className = "btn btn-lg col-xs-12 btnSelected";
+	}
+
 }
 addEvents();
 
-function setActive(){
-	var tournament = document.getElementById("torneo");
+
+function setActive(btnSelected){
+	var tournament = btnSelected;
 	enableLi(tournament.innerText);
 	localStorage.setItem("active", tournament.innerText);
-	var btn = document.getElementById("torneo");
-	btn.style.backgroundColor = '#2a4f6f';
-	btn.style.cursor = 'default';
-	btn.removeEventListener("click", setActive)
+	btnSelected.removeEventListener("click", function click (event) {
+				setActive(this);
+			}, true);
+	var btn = document.getElementsByClassName("btn btn-lg col-xs-12 btnSelected");
+	if (btn.length != 0) {
+		btn[0].className = "btn btn-lg btn-warning col-xs-12";
+	}
+	btnSelected.className = "btn btn-lg col-xs-12 btnSelected";
 }
 
-function createElements() {
+function createElements(tournamentName) {
 	var button = "<div class=\"row\">"+"<button type=\"button\" " +
-		"class=\"btn btn-lg btn-primary col-xs-12\" id=\"torneo\"></button>"+"</div>";
+		"class=\"btn btn-lg btn-warning col-xs-12\" id=\""+ tournamentName +"\" name=\"torneo\"></button>"+"</div>";
 	var div = document.getElementById("jumbotron");
-	div.innerHTML = button;
+	div.innerHTML =  div.innerHTML + button;
 }
 
 function enableLi(tournamentName) {

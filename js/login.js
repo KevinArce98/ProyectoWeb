@@ -19,6 +19,7 @@ function verification() {
 			if (userName == element.userName) {
 				if (pass == element.pass) {
 					location.href = "Principal.html";
+					localStorage.setItem("userActive", userName);
 					break;
 				} else {
 					alert("Contraseña incorrecta.")

@@ -22,14 +22,7 @@ hr:before {
   border-width: 0 0 1px 0; 
   border-radius: 20px; 
 }
-textarea{
-	margin-bottom: 25px;
-}
 
-@media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
-    float: inherit;
-}
 form{
 	text-align: center;
 }
@@ -38,17 +31,14 @@ form{
 	font-size: 15px;
   color: #FF0000;
 }
-.botones{
-	margin-left: 7.5px;
-	margin-right: 7.5px;
-	padding: 6px 3%;
-}
+
 img{
 	margin-top: 25px;
 }
 .rowend{
 	margin-bottom: 30px;
 }
+
 .logo{
   cursor: default;
 }

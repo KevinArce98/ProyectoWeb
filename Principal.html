@@ -35,7 +35,7 @@
 							<ul class="dropdown-menu">
 								<li><a href="EditarPerfil.html">Editar</a></li>
 								<li class="divider"></li>
-								<li><a href="index.html">Cerrar Sesi&oacute;n</a></li>
+								<li><a id="closeSession">Cerrar Sesi&oacute;n</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -49,6 +49,12 @@
 		</div>
 		
 		<hr>
+		<div class="row">
+			<div class="col-xs-12 col-sm-9 col-md-10"></div>
+			<div class="col-xs-12 col-sm-2 col-md-2">
+				<button type="button" id="otro" class="btn btn-success">Crear otro torneo</button>
+			</div>
+		</div>
 		<p class="text-center" id="text">Seleccione el torneo para ver los detalles</p>
 		<div class="jumbotron text-center" id="jumbotron">
 			<div id="notFind">
@@ -68,6 +74,7 @@
     </footer>
 	<script src="./js/jquery.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/mainplus.js"></script>
 	<script src="./js/principal.js"></script>
 </body>
 </html>

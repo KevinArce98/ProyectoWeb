@@ -40,3 +40,7 @@ h2{
 	padding-left: 8px;
 	background-color: #D5D2D2;
 }
+
+.matchFinished{
+  background-color: #dc9706;
+}

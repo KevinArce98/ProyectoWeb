@@ -1,35 +1,9 @@
-table.bracket {
-    border-collapse: collapse;
-    border: none;
+.fondo{
+	background-color: #0B7A8A;
+	padding: 5px;
+	border-radius: 15px;
+	margin-bottom: 90px;
 }
-
-.bracket td {
-    vertical-align: middle;
-    width: 40em;
-    margin: 0;
-    padding: 10px;
-}
-
-.bracket td p {
-    border-bottom: solid 1px #fff;
-    margin: 0;
-    padding: 5px 5px 5px 5px;
-}
-
-.bracket th{
-    text-align:center;
-}
-table{
-    margin: 40px;
-    color: #fff;
-}
-h2{
-    margin-top: 35px;
-}
-.llaves{
-    background: #49A49D;
-    border-radius: 25px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin-bottom: 85px;
+.label{
+	color: #0461ec;
 }

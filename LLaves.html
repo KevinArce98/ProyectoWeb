@@ -6,6 +6,7 @@
 	<title>LLaves</title>
 	<link rel="icon" href="./images/logo.ico">
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/jquery.bracket.min.css">
 	<link rel="stylesheet" href="./css/mainplus.css">
 	<link rel="stylesheet" href="./css/llaves.css">
 </head>
@@ -35,7 +36,7 @@
 							<ul class="dropdown-menu">
 								<li><a href="EditarPerfil.html">Editar</a></li>
 								<li class="divider"></li>
-								<li><a href="index.html">Cerrar Sesi&oacute;n</a></li>
+								<li><a id="closeSession">Cerrar Sesi&oacute;n</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -45,29 +46,15 @@
 	</header>
 	<div class="container">
 		<h2 class="text-center">Eliminatoria</h2>
-		<div class="llaves">
-			<table summary="Tournament Bracket" class="bracket">
-			<tr>
-			    <th>Cuartos de final</th>
-			    <th>Semifinales</th>
-			    <th>Final</th>
-			</tr>
-			<tr>
-			    <td><p>Real Madrid</p></td>
-			    <td rowspan="2"><p></p></td>
-			    <td rowspan="4"><p></p></td>
-			</tr>
-			<tr>
-			    <td><p>BvB</p></td>
-			</tr>
-			<tr>
-			    <td><p>Barcelona</p></td>
-			    <td rowspan="3"><p></p></td>
-			</tr>
-			<tr>
-			    <td><p>Betis</p></td>
-			</tr>
-			</table>
+		<div class="fondo">
+			<div class="row">
+				<div class="col-md-12 ">
+					<div class="table-responsive ">	
+						<div id="bracket1">
+						</div>
+					</div>
+				</div>				
+			</div>
 		</div>
 	</div>
 	<footer class="container-fluid text-center bg-lightgray">
@@ -79,6 +66,8 @@
     </footer>
 	<script src="./js/jquery.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/jquery.bracket.min.js"></script>
 	<script src="./js/mainplus.js"></script>
+	<script src="./js/llaves.js"></script>
 </body>
 </html>

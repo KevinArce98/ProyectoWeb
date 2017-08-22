@@ -35,7 +35,7 @@
 							<ul class="dropdown-menu">
 								<li><a href="EditarPerfil.html">Editar</a></li>
 								<li class="divider"></li>
-								<li><a href="index.html">Cerrar Sesi&oacute;n</a></li>
+								<li><a id="closeSession">Cerrar Sesi&oacute;n</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -57,39 +57,38 @@
 				<form>
 					<div class="form-group">
 						<label class="control-label" for="formGroup">Nombre de Usuario</label>
-						<input class="form-control" type="text" id="formGroup" value="KevinArce98" readonly>
+						<input class="form-control" type="text" id="user" value="" readonly>
 					</div>
 					<div class="form-group">
 						<label class="control-label" for="formGroup">Nombre</label>
-						<input class="form-control" type="text" id="formGroup" placeholder="Nombre">
+						<input class="form-control" type="text" id="name" placeholder="Nombre">
 					</div>
 					<div class="form-group">
 						<label class="control-label" for="formGroup">Apellidos</label>
-						<input class="form-control" type="text" id="formGroup" placeholder="Apelldio">
+						<input class="form-control" type="text" id="lastname" placeholder="Apelldio">
 					</div>
 					<div class="form-group">
-						<label class="control-label" for="formGroup" id="tel">Teléfono</label>
+						<label class="control-label" for="formGroup">Teléfono</label>
 						<div class="input-group">
 							<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
-							<input class="form-control" type="text" id="formGroup" placeholder="Tel&eacute;fono">      
+							<input class="form-control" type="text" id="phone" placeholder="Tel&eacute;fono">      
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label" for="formGroup" id="email">Correo electrónico</label>
+						<label class="control-label" for="formGroup">Correo electrónico</label>
 						<div class="input-group">
 							<span class="input-group-addon">@</span>
-							<input class="form-control" type="text" id="formGroup" readonly>
+							<input class="form-control" type="email" id="email" readonly>
 						 </div>
 					</div>
 					<div class="form-group">
 						<label class=" control-label" for="formGroup">Información biográfica</label>
-						 <textarea class="form-control" rows="4"></textarea>
+						 <textarea class="form-control" rows="4" id="info"></textarea>
 					</div>
 					<br />
 					<div class="form-group">
 						<label class="control-label" for="formGroup"></label>
-							<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-floppy-saved"></span> Guardar</button>
-							<button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span> Cancelar</button>
+							<button type="submit" class="btn btn-success" id="save"><span class="glyphicon glyphicon-floppy-saved"></span> Guardar</button>
 					</div>
 				</form>
 			</div>
@@ -105,5 +104,6 @@
 	<script src="./js/jquery.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/mainplus.js"></script>
+	<script src="./js/perfil.js"></script>
 </body>
 </html>

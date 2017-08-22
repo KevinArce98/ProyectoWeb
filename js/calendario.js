@@ -1,5 +1,6 @@
 function showMatchs() {
-	var journeysAll = JSON.parse(localStorage.getItem('calendar'));
+	var nameTournament = localStorage.getItem("active")
+	var journeysAll = JSON.parse(localStorage.getItem('calendar ' + nameTournament));
 	var team1;
 	var team2;
 	var createMatch;
@@ -11,11 +12,23 @@ function showMatchs() {
 		for (var j = 0; j < matchs.length; j++) {
 			team1 = matchs[j].local;
 			team2 = matchs[j].visit;
-			createMatch = "<div class=\"col-md-2\">"+
-			"<input value=\"" + team1 + "\" class=\"form-control text-center\" readonly>" +
-			"<p class=\"vs\">VS</p>" +
-			"<input value=\"" + team2 + "\" class=\"form-control text-center\" readonly>" +
-			"</div>";
+			if (matchs[j].finished == false) {
+				createMatch = "<div class=\"col-md-2\">"+
+				"<input value=\"" + team1 + "\" class=\"form-control text-center\" readonly>" +
+				"<p class=\"vs\">VS</p>" +
+				"<input value=\"" + team2 + "\" class=\"form-control text-center\" readonly>" +
+				"</div>";
+			}else {
+				createMatch = "<div class=\"col-md-2 matchFinished\">"+
+				"<input value=\"" + team1 + "\" class=\"form-control text-center\" readonly>" +
+				"<p class=\"vs\">VS</p>" +
+				"<input value=\"" + team2 + "\" class=\"form-control text-center\" readonly>" +
+				"</div>";
+			}
+
+
+
+
 			list += createMatch;
 		}
 		var createJourney = "<h2 class=\"text-center\">" + journey + "</h2>" + 
