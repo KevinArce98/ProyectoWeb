@@ -1,7 +1,7 @@
-var goalScorerVisit = [];
-var goalScorerLocal = [];
+var goalScorerList = [];
 var linkA;
 var div;
+var positionTournament;
 
 function showMatchs() {
 	var nameTournament = localStorage.getItem("active")
@@ -89,7 +89,12 @@ function addGoalLocal() {
 	if (goalScorer != "") {
 		var area = document.getElementById("scoresLocal");
 		area.value = area.value + goalScorer + "\n";
-		goalScorerLocal.push(goalScorer);
+		var Scorer = {
+			name : goalScorer,
+			team : document.getElementById("teamLocal").value, 
+			goal : 1,
+		};
+		goalScorerList.push(Scorer);
 		document.getElementById("nameScorer1").value = "";
 		var goals = document.getElementById("goalLocal");
 		goals.value = parseInt(goals.value) + 1;
@@ -103,13 +108,90 @@ function addGoalVisit() {
 	if (goalScorer != "") {
 		var area = document.getElementById("scoresVisit");
 		area.value = area.value + goalScorer + "\n";
-		goalScorerVisit.push(goalScorer);
+		var Scorer = {
+			name : goalScorer,
+			team : document.getElementById("teamVisit").value, 
+			goal : 1,
+		};
+		goalScorerList.push(Scorer);
 		document.getElementById("nameScorer2").value = "";
 		var goals = document.getElementById("goalVisit");
 		goals.value = parseInt(goals.value) + 1;
 	} else {
 		alert("Ingrese el nombre");
 	}
+}
+
+function searchGoalScorerValid () {
+	var list = [];
+	if (localStorage.getItem("goalScorers")) {
+		var goalScorersAll = JSON.parse(localStorage.getItem("goalScorers"));
+		for (var i = 0; i < goalScorersAll.length; i++) {
+			if (goalScorersAll[i].idTournament == searchTournament().id) {
+			 	list = goalScorersAll[i].scorers;
+			 	positionTournament = i;
+			 	break;
+			}else {
+				list = null;
+			}
+		}
+	}
+	return list;		
+}
+
+function pushGoalScorer () {
+	var goalScorers = [];
+	var Scorer;
+	var scorersTournament;
+	var here = false;
+	var aux = false; 
+	var goalScorersAll = [];
+	if (localStorage.getItem("goalScorers")) {
+		goalScorersAll = JSON.parse(localStorage.getItem("goalScorers"));
+		var list = searchGoalScorerValid();
+		if (list != null) {
+			aux = true;
+			for (var j = 0; j < goalScorerList.length; j++) {
+				here = false;
+				for (var k = 0; k < list.length; k++) {
+					if (list[k].name.toLowerCase() == goalScorerList[j].name.toLowerCase()) {
+						here = true;
+						list[k].goal = list[k].goal+goalScorerList[j].goal;
+						break;
+					}
+				}
+				if (here == false) {
+					list.push(goalScorerList[j]);
+				}
+			}
+			goalScorersAll[positionTournament].scorers = list;
+		}else {
+			aux = false;
+		}
+	}
+
+	 if(aux == false) {
+		for (var i = 0; i < goalScorerList.length; i++) {
+			here = false;
+			for (var k = 0; k < goalScorers.length; k++) {
+				if (goalScorers[k].name.toLowerCase() == goalScorerList[i].name.toLowerCase()) {
+					here = true;
+					goalScorers[k].goal = goalScorers[k].goal+goalScorerList[i].goal;
+					break;
+				}
+			}
+			if (here == false) {
+				goalScorers.push(goalScorerList[i]);
+			}
+		}					
+
+		scorersTournament = {
+			scorers : goalScorers,
+			idTournament : searchTournament().id,
+		};
+		goalScorersAll.push(scorersTournament);
+	}
+	localStorage.setItem("goalScorers", JSON.stringify(goalScorersAll));
 }
 
 function finished() {
@@ -126,8 +208,10 @@ function finished() {
 	if (searchTournament().mode == "ME") {
 		addCalendarElimination();
 	}
+	pushGoalScorer();
 	showMatchs();
 	addEvents();
+	cancel();
 }
 
 function setFinishedMatch(local, visit, mode) {
@@ -261,6 +345,7 @@ function cancel() {
 	document.getElementById("scoresLocal").value = "";
 	document.getElementById("goalLocal").value = "0";
 
+	goalScorerList = [];
 }
 function addCalendarElimination(){
 	var nameTournament = localStorage.getItem("active");

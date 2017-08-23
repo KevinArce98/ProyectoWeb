@@ -69,8 +69,8 @@ function verificationTeams(event) {
 		}else if(mode == "ME"){
 			if (data >= 2) {
 				if (data <= 32) {
-					if ((data != 2) && (data != 8 ) && (data != 16) && (data != 32)) {
-						alert("el numero de equipos tiene que ser 2-8-16-32 para eliminatoria");
+					if ((data != 2) && (data != 4 ) && (data != 8 ) && (data != 16) && (data != 32)) {
+						alert("el numero de equipos tiene que ser 2-4-8-16-32 para eliminatoria");
 						document.getElementById("numTeams").value = "2";
 					}
 				} else {

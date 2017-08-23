@@ -48,18 +48,15 @@
 			<h1 class="text-center">Tabla de Goleadores</h1>
 			<div class="frm">
 				<div class="col-md-6">
-					<form action="" >
-						<select class="form-control">
+						<select class="form-control" id="select">
 						  <option value="goles">Goles</option>
 						  <option value="equipo">Equipo</option>
 						  <option value="alfabeto">Alfabeto</option>
 						</select>
-						<input type="submit" value="Ordenar" class="btn btn-success">
-					</form>
+						<button type="button" value="Ordenar" class="btn btn-success" id="order">Ordenar</button>
 				</div>
 				<div class="col-md-6 text-right">
-					<button type="button" class="btn btn-info">Refrescar</button>
-					<button type="button" class="btn btn-danger">Vaciar tabla</button>
+					<button type="button" class="btn btn-danger" id="remove">Vaciar tabla</button>
 				</div>
 			</div>				
 		</div>
@@ -76,7 +73,7 @@
 									<th class="text-center">Equipo</th>
 								</tr>
 								<tbody id="goalScorer">
-
+		
 								</tbody>
 							</table>
 						</div>
@@ -84,13 +81,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="row rowbottom">
-			<div class="col-md-12">
-				<div class="botonElimninar">
-					<button type="button" class="btn btn-warning">Eliminar Goleador</button><br>	
-					<p class="help-block">Elija el jugador y presione eliminar</p>
-				</div>
-			</div>
+		<div class="rowbottom">
+			
 		</div>
 	</div>
 	<footer class="container-fluid text-center bg-lightgray">
@@ -103,5 +95,6 @@
 	<script src="./js/jquery.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/mainplus.js"></script>
+	<script src="./js/goleadores.js"></script>
 </body>
 </html>
